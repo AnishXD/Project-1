@@ -33,7 +33,7 @@ export default function Navbar(props) {
         </a>
 
         <button
-          className="navbar-toggler"
+          className="navbar-toggler my-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -43,7 +43,10 @@ export default function Navbar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse my-1"
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
@@ -56,52 +59,52 @@ export default function Navbar(props) {
               </a>
             </li>
           </ul>
-          <div>
-            <button
-              type="button"
-              className="btn btn-outline-primary mx-2"
+
+          <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              style={{
+                height: "30px",
+                width: "30px",
+                cursor: "pointer",
+                border: "1px solid black",
+              }}
               onClick={handleOnClickPrimary}
-            >
-              Blue
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-secondary mx-2"
-              onClick={handleOnClickSecondary}
-            >
-              Melon
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-success mx-2"
+            ></div>
+
+            <div
+              className="bg-danger rounded mx-2"
+              style={{
+                height: "30px",
+                width: "30px",
+                cursor: "pointer",
+                border: "1px solid black",
+              }}
               onClick={handleOnClickSuccess}
-            >
-              Green
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-danger mx-2"
+            ></div>
+            <div
+              className="bg-success rounded mx-2"
+              style={{
+                height: "30px",
+                width: "30px",
+                cursor: "pointer",
+                border: "1px solid black",
+              }}
               onClick={handleOnClickDanger}
-            >
-              Red
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-warning mx-2"
+            ></div>
+            <div
+              className="bg-warning rounded mx-2"
+              style={{
+                height: "30px",
+                width: "30px",
+                cursor: "pointer",
+                border: "1px solid black",
+              }}
               onClick={handleOnClickWarning}
-            >
-              Pumpkin
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-info mx-2"
-              onClick={handleOnClickInfo}
-            >
-              Navy
-            </button>
+            ></div>
           </div>
           <div
-            className={`form-check form-switch text-${
+            className={`form-check my-1 form-switch text-${
               props.mode === "light" ? "dark" : "light"
             }`}
           >
@@ -126,7 +129,7 @@ export default function Navbar(props) {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-primary my-1" type="submit">
               Search
             </button>
           </form>
